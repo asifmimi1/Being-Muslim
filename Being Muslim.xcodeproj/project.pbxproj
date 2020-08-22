@@ -56,15 +56,47 @@
 		73B97C9D24F1901900510E09 /* Being Muslim */ = {
 			isa = PBXGroup;
 			children = (
-				73B97C9E24F1901900510E09 /* AppDelegate.swift */,
-				73B97CA024F1901900510E09 /* SceneDelegate.swift */,
-				73B97CA224F1901900510E09 /* ViewController.swift */,
-				73B97CA424F1901900510E09 /* Main.storyboard */,
-				73B97CA724F1901E00510E09 /* Assets.xcassets */,
-				73B97CA924F1901E00510E09 /* LaunchScreen.storyboard */,
+				73B97CB224F1907100510E09 /* Delegates */,
+				73B97CB324F1908100510E09 /* Controllers */,
+				73B97CB424F1908E00510E09 /* View */,
+				73B97CB524F1909D00510E09 /* Utilities */,
 				73B97CAC24F1901E00510E09 /* Info.plist */,
 			);
 			path = "Being Muslim";
+			sourceTree = "<group>";
+		};
+		73B97CB224F1907100510E09 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				73B97C9E24F1901900510E09 /* AppDelegate.swift */,
+				73B97CA024F1901900510E09 /* SceneDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		73B97CB324F1908100510E09 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				73B97CA224F1901900510E09 /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		73B97CB424F1908E00510E09 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				73B97CA424F1901900510E09 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		73B97CB524F1909D00510E09 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				73B97CA724F1901E00510E09 /* Assets.xcassets */,
+				73B97CA924F1901E00510E09 /* LaunchScreen.storyboard */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
