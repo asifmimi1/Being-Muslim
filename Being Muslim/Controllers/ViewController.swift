@@ -11,9 +11,15 @@ import Adhan
 
 class ViewController: UIViewController {
     
+    @IBOutlet weak var SunriseLbl: UILabel!
+    @IBOutlet weak var SunsetLbl: UILabel!
+    
+    
     @IBOutlet weak var NextNamajLbl: UILabel!
+    
     @IBOutlet weak var ArabicDateLbl: UILabel!
     @IBOutlet weak var EnglishDateLbl: UILabel!
+    
     @IBOutlet weak var FajarLbl: UILabel!
     @IBOutlet weak var DhuhrLbl: UILabel!
     @IBOutlet weak var AsrLbl: UILabel!
@@ -34,7 +40,7 @@ class ViewController: UIViewController {
     }
     
     
-    
+    //MARK: Arabic date
     func ArabicDate() {
         let formetter = DateFormatter()
         let islamicCelender: Calendar = Calendar(identifier: .islamicCivil)
@@ -44,6 +50,7 @@ class ViewController: UIViewController {
         let hijriDate = formetter.string(from: currentDate)
         ArabicDateLbl.text = hijriDate
     }
+    //MARK: Gegorian date
     func EngDate() {
         let dateFormatterPrint = DateFormatter()
         dateFormatterPrint.dateFormat = "EEEE,d MMM, yyyy"
@@ -51,7 +58,7 @@ class ViewController: UIViewController {
         print(dateFormatterPrint.string(from: exactlyCurrentTime))
         EnglishDateLbl.text = "\(dateFormatterPrint.string(from: exactlyCurrentTime))"
     }
-    
+    //MARK: 'Adhan' pod
     func AdhanLibrary() {
         let cal = Calendar(identifier: Calendar.Identifier.gregorian)
         let date = cal.dateComponents([.year, .month, .day], from: Date())
@@ -64,6 +71,7 @@ class ViewController: UIViewController {
             let formatter = DateFormatter()
             formatter.timeStyle = .short
             formatter.timeZone = TimeZone(identifier: "Asia/Dhaka")!
+            formatter.locale = Locale(identifier: "bn_IN")
             
             print("fajr \(formatter.string(from: prayers.fajr))")
             print("sunrise \(formatter.string(from: prayers.sunrise))")
@@ -77,6 +85,7 @@ class ViewController: UIViewController {
             AsrLbl.text = formatter.string(from: prayers.asr)
             MaghribLbl.text = formatter.string(from: prayers.maghrib)
             IshaLbl.text = formatter.string(from: prayers.isha )
+            SunriseLbl.text = formatter.string(from: prayers.sunrise)
             
             
             let prayerTimes = PrayerTimes(coordinates: coordinates, date: date, calculationParameters: params)
