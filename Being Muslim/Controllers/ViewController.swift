@@ -10,10 +10,12 @@ import UIKit
 import Adhan
 
 class ViewController: UIViewController {
+   
+    @IBOutlet weak var IftarTimeLbl: UILabel!
+    @IBOutlet weak var SahurTimeLbl: UILabel!
     
     @IBOutlet weak var SunriseLbl: UILabel!
     @IBOutlet weak var SunsetLbl: UILabel!
-    
     
     @IBOutlet weak var NextNamajLbl: UILabel!
     
@@ -85,7 +87,12 @@ class ViewController: UIViewController {
             AsrLbl.text = formatter.string(from: prayers.asr)
             MaghribLbl.text = formatter.string(from: prayers.maghrib)
             IshaLbl.text = formatter.string(from: prayers.isha )
+            
             SunriseLbl.text = formatter.string(from: prayers.sunrise)
+            SunsetLbl.text = formatter.string(from: prayers.maghrib)
+            
+            SahurTimeLbl.text = formatter.string(from: prayers.fajr)
+            IftarTimeLbl.text = formatter.string(from: prayers.maghrib)
             
             
             let prayerTimes = PrayerTimes(coordinates: coordinates, date: date, calculationParameters: params)

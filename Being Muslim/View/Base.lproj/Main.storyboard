@@ -423,10 +423,10 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xYX-dp-5s4">
                                 <rect key="frame" x="20" y="60" width="110" height="48"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="wtt-mf-eeG">
-                                        <rect key="frame" x="1" y="0.0" width="109.33333333333333" height="20"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="i9S-mC-8xp">
+                                        <rect key="frame" x="1" y="0.0" width="109.33333333333333" height="48"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="rpJ-IZ-OU1">
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="2cd-h4-SzW">
                                                 <rect key="frame" x="0.0" y="0.0" width="109.33333333333333" height="20"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="সূর্যোদয় :" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oz7-Ml-ure">
@@ -442,6 +442,29 @@
                                                         <rect key="frame" x="66.666666666666671" y="0.0" width="42.666666666666671" height="20"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="20" id="fqe-iA-N2c"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="tth-MA-bta">
+                                                <rect key="frame" x="0.0" y="28" width="109.33333333333333" height="20"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="সূর্যাস্ত   :" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HAe-Jc-izK">
+                                                        <rect key="frame" x="0.0" y="0.0" width="55.666666666666664" height="20"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="20" id="RF4-Z5-VJl"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Swh-4m-HxE">
+                                                        <rect key="frame" x="65.666666666666671" y="0.0" width="43.666666666666671" height="20"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="20" id="hrp-8a-nWF"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -490,10 +513,13 @@
                         <outlet property="DhuhrLbl" destination="gSb-ts-R0Q" id="xUE-dS-snx"/>
                         <outlet property="EnglishDateLbl" destination="tqd-q3-Gtk" id="dkT-cF-Gia"/>
                         <outlet property="FajarLbl" destination="6qD-kZ-gNt" id="Alg-me-6Gj"/>
+                        <outlet property="IftarTimeLbl" destination="Ezg-t8-IH2" id="e6q-3W-Zge"/>
                         <outlet property="IshaLbl" destination="jVl-xg-Y32" id="53l-zs-FqW"/>
                         <outlet property="MaghribLbl" destination="o4j-uV-oWQ" id="UQq-qv-Y3O"/>
                         <outlet property="NextNamajLbl" destination="ict-cv-QuB" id="mTU-vw-TEX"/>
+                        <outlet property="SahurTimeLbl" destination="jO0-eg-oGJ" id="YqS-JU-eBr"/>
                         <outlet property="SunriseLbl" destination="T7O-2C-Rj2" id="JjK-Xl-UiF"/>
+                        <outlet property="SunsetLbl" destination="Swh-4m-HxE" id="uNm-Z4-FzR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
