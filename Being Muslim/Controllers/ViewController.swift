@@ -65,7 +65,7 @@ class ViewController: UIViewController {
     //MARK: Gegorian date
     func EngDate() {
         let dateFormatterPrint = DateFormatter()
-        dateFormatterPrint.dateFormat = "EEEE,d MMM, yyyy"
+        dateFormatterPrint.dateFormat = "EEE,d MMM, yyyy"
         let exactlyCurrentTime: Date = Date()
         print(dateFormatterPrint.string(from: exactlyCurrentTime))
         EnglishDateLbl.text = "\(dateFormatterPrint.string(from: exactlyCurrentTime))"
