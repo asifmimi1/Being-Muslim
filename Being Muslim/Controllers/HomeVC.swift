@@ -9,7 +9,7 @@
 import UIKit
 import Adhan
 
-class ViewController: UIViewController {
+class HomeVC: UIViewController {
     @IBOutlet weak var FajarNamazView: UIView!
     @IBOutlet weak var DhuhrNamazView: UIView!
     @IBOutlet weak var AsrNamazView: UIView!

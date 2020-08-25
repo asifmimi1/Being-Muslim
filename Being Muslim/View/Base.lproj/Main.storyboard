@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item-->
+        <!--Home-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Being_Muslim" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="HomeVC" customModule="Being_Muslim" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -529,7 +529,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="fHJ-Gd-h9o"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="HomeIcon26" id="fHJ-Gd-h9o"/>
                     <connections>
                         <outlet property="ArabicDateLbl" destination="Rc8-eJ-Eno" id="Jou-LU-oYt"/>
                         <outlet property="AsrLbl" destination="dF5-5E-Oil" id="cT1-6V-KGf"/>
@@ -554,7 +554,7 @@
             </objects>
             <point key="canvasLocation" x="266.66666666666669" y="-216.03260869565219"/>
         </scene>
-        <!--Item-->
+        <!--Quran-->
         <scene sceneID="WrP-Vk-Qda">
             <objects>
                 <viewController id="MGj-07-dMd" sceneMemberID="viewController">
@@ -564,15 +564,15 @@
                         <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="Cts-eg-KLJ"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" badgeValue="100" id="PFv-hf-fVb">
-                        <color key="badgeColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <tabBarItem key="tabBarItem" title="Quran" image="QuranIcon26" badgeValue="114" id="PFv-hf-fVb">
+                        <color key="badgeColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CVp-J5-oQM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="267" y="434"/>
         </scene>
-        <!--Item-->
+        <!--Hadith-->
         <scene sceneID="5Qo-IG-XoA">
             <objects>
                 <viewController id="Srh-F9-Z0F" sceneMemberID="viewController">
@@ -582,11 +582,11 @@
                         <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="aE1-Ts-Znz"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="HMT-iy-P7q"/>
+                    <tabBarItem key="tabBarItem" title="Hadith" image="HadithIcon26" id="HMT-iy-P7q"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5QF-Am-aNI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="945" y="-6"/>
+            <point key="canvasLocation" x="919" y="434"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="JML-NX-QiY">
@@ -596,7 +596,7 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="3Tu-oG-uOb">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" red="0.99999600649999998" green="1" blue="1" alpha="0.91695092429577463" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="wGv-Fo-2BM"/>
@@ -610,6 +610,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="HadithIcon26" width="26" height="26"/>
+        <image name="HomeIcon26" width="26" height="26"/>
+        <image name="QuranIcon26" width="26" height="26"/>
         <image name="alarm-clock-xxl" width="256" height="256"/>
         <image name="menu button display" width="28" height="19"/>
         <image name="mosque_back" width="720" height="917"/>
