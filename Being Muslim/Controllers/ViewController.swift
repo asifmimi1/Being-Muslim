@@ -10,7 +10,12 @@ import UIKit
 import Adhan
 
 class ViewController: UIViewController {
-   
+    @IBOutlet weak var FajarNamazView: UIView!
+    @IBOutlet weak var DhuhrNamazView: UIView!
+    @IBOutlet weak var AsrNamazView: UIView!
+    @IBOutlet weak var MaghribNamazView: UIView!
+    @IBOutlet weak var IshaNamazView: UIView!
+    
     @IBOutlet weak var IftarTimeLbl: UILabel!
     @IBOutlet weak var SahurTimeLbl: UILabel!
     
@@ -38,6 +43,11 @@ class ViewController: UIViewController {
         AdhanLibrary()
         EngDate()
         ArabicDate()
+        NamazView(demoView: FajarNamazView)
+        NamazView(demoView: DhuhrNamazView)
+        NamazView(demoView: AsrNamazView)
+        NamazView(demoView: MaghribNamazView)
+        NamazView(demoView: IshaNamazView)
         
     }
     
@@ -97,11 +107,24 @@ class ViewController: UIViewController {
             
             let prayerTimes = PrayerTimes(coordinates: coordinates, date: date, calculationParameters: params)
 
-            let current = prayerTimes?.currentPrayer()
-            let next = prayerTimes?.nextPrayer()
-            let countdown = prayerTimes!.time(for: next!)
-            NextNamajLbl.text = formatter.string(from: countdown)
+//            let current = prayerTimes?.currentPrayer()
+//            let next = prayerTimes?.nextPrayer()
+//            let countdown = prayerTimes!.time(for: next!)
+//            NextNamajLbl.text = formatter.string(from: countdown)
             }
+    }
+    func NamazView(demoView: UIView) {
+        
+//        var demoView: UIView
+//        fajrView = demoView
+//        dhuhurView = demoView
+//        asrView = demoView
+//        maghribView = demoView
+//        ishaView = demoView
+        
+        demoView.layer.borderWidth = 1
+        demoView.layer.borderColor = UIColor.white.cgColor
+        demoView.layer.cornerRadius = 6
     }
     
 }

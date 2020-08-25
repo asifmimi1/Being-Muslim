@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -93,6 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				73B97CA424F1901900510E09 /* Main.storyboard */,
+				73B97CA924F1901E00510E09 /* LaunchScreen.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -101,7 +102,6 @@
 			isa = PBXGroup;
 			children = (
 				73B97CA724F1901E00510E09 /* Assets.xcassets */,
-				73B97CA924F1901E00510E09 /* LaunchScreen.storyboard */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -112,7 +112,6 @@
 				8080B2515DEBF0338C860603 /* Pods-Being Muslim.debug.xcconfig */,
 				791BAAD4E2419AB78C0AC3FA /* Pods-Being Muslim.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
