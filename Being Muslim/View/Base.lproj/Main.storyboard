@@ -486,6 +486,7 @@
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="144" id="Ffw-hh-Xv1"/>
                                             <constraint firstAttribute="height" constant="20" id="Jno-5t-IVQ"/>
+                                            <constraint firstAttribute="width" constant="144" id="w2g-oo-EIA"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -545,6 +546,7 @@
                         <outlet property="MaghribLbl" destination="o4j-uV-oWQ" id="UQq-qv-Y3O"/>
                         <outlet property="MaghribNamazView" destination="RDB-S5-g25" id="g4x-bj-9cN"/>
                         <outlet property="NextNamajLbl" destination="ict-cv-QuB" id="mTU-vw-TEX"/>
+                        <outlet property="NextNamazLbl" destination="nrX-FP-Llt" id="Drg-7s-5hf"/>
                         <outlet property="SahurTimeLbl" destination="jO0-eg-oGJ" id="YqS-JU-eBr"/>
                         <outlet property="SunriseLbl" destination="T7O-2C-Rj2" id="JjK-Xl-UiF"/>
                         <outlet property="SunsetLbl" destination="Swh-4m-HxE" id="uNm-Z4-FzR"/>
@@ -554,23 +556,67 @@
             </objects>
             <point key="canvasLocation" x="266.66666666666669" y="-216.03260869565219"/>
         </scene>
-        <!--Quran-->
-        <scene sceneID="WrP-Vk-Qda">
+        <!--QURAN-->
+        <scene sceneID="qbc-5X-KZO">
             <objects>
-                <viewController id="MGj-07-dMd" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="GHk-NZ-Ten">
+                <viewController id="Y6a-oJ-dwy" customClass="QuranVC" customModule="Being_Muslim" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KHu-B5-iu5">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="Cts-eg-KLJ"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5cb-2n-7Z0">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="73" id="cS8-Go-xBE" customClass="QuranAudioCell" customModule="Being_Muslim" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="73"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cS8-Go-xBE" id="CY0-oW-gvE">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="73"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tiM-qS-uac">
+                                                    <rect key="frame" x="186.33333333333334" y="26.333333333333336" width="41.666666666666657" height="20.333333333333336"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="tiM-qS-uac" firstAttribute="centerX" secondItem="CY0-oW-gvE" secondAttribute="centerX" id="l54-rH-QGz"/>
+                                                <constraint firstItem="tiM-qS-uac" firstAttribute="centerY" secondItem="CY0-oW-gvE" secondAttribute="centerY" id="nDg-QN-39Z"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="nameLbl" destination="tiM-qS-uac" id="teQ-iI-EvZ"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Y6a-oJ-dwy" id="dcn-8r-hBP"/>
+                                    <outlet property="delegate" destination="Y6a-oJ-dwy" id="qDD-GO-NsJ"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="5cb-2n-7Z0" firstAttribute="leading" secondItem="lgL-EX-rLG" secondAttribute="leading" id="eLg-T5-zk6"/>
+                            <constraint firstItem="5cb-2n-7Z0" firstAttribute="top" secondItem="lgL-EX-rLG" secondAttribute="top" id="g7u-Ey-5cb"/>
+                            <constraint firstItem="5cb-2n-7Z0" firstAttribute="bottom" secondItem="lgL-EX-rLG" secondAttribute="bottom" id="v1A-tN-pJY"/>
+                            <constraint firstItem="5cb-2n-7Z0" firstAttribute="trailing" secondItem="lgL-EX-rLG" secondAttribute="trailing" id="wVy-u2-w13"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="lgL-EX-rLG"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Quran" image="QuranIcon26" badgeValue="114" id="PFv-hf-fVb">
-                        <color key="badgeColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <tabBarItem key="tabBarItem" title="QURAN" image="QuranIcon26" badgeValue="114" id="nTD-E8-Sc0">
+                        <color key="badgeColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBarItem>
+                    <connections>
+                        <outlet property="tableView" destination="5cb-2n-7Z0" id="mZY-O4-MJ5"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="CVp-J5-oQM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AR4-M7-mAd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="267" y="434"/>
+            <point key="canvasLocation" x="239.13043478260872" y="433.69565217391306"/>
         </scene>
         <!--Hadith-->
         <scene sceneID="5Qo-IG-XoA">
@@ -586,13 +632,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5QF-Am-aNI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="919" y="434"/>
+            <point key="canvasLocation" x="893" y="434"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="JML-NX-QiY">
             <objects>
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="dOI-My-cu9" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="YXX-pp-Iqq"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="3Tu-oG-uOb">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -600,7 +647,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="wGv-Fo-2BM"/>
-                        <segue destination="MGj-07-dMd" kind="relationship" relationship="viewControllers" id="6Ki-4z-7C2"/>
+                        <segue destination="Y6a-oJ-dwy" kind="relationship" relationship="viewControllers" id="7i0-kT-PlS"/>
                         <segue destination="Srh-F9-Z0F" kind="relationship" relationship="viewControllers" id="Y5v-jL-eJA"/>
                     </connections>
                 </tabBarController>

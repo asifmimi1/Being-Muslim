@@ -10,6 +10,9 @@ import UIKit
 import Adhan
 
 class HomeVC: UIViewController {
+    
+    @IBOutlet weak var NextNamazLbl: UILabel!
+    
     @IBOutlet weak var FajarNamazView: UIView!
     @IBOutlet weak var DhuhrNamazView: UIView!
     @IBOutlet weak var AsrNamazView: UIView!
@@ -33,7 +36,7 @@ class HomeVC: UIViewController {
     @IBOutlet weak var MaghribLbl: UILabel!
     @IBOutlet weak var IshaLbl: UILabel!
     
-   
+    //let quranVC = QuranTVC()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,7 +51,7 @@ class HomeVC: UIViewController {
         NamazView(demoView: AsrNamazView)
         NamazView(demoView: MaghribNamazView)
         NamazView(demoView: IshaNamazView)
-        
+        //quranVC.parseJSON()
     }
     
     
@@ -79,19 +82,12 @@ class HomeVC: UIViewController {
         params.madhab = .hanafi
         
         if let prayers = PrayerTimes(coordinates: coordinates, date: date, calculationParameters: params) {
-           
+            
             let formatter = DateFormatter()
             formatter.timeStyle = .short
             formatter.timeZone = TimeZone(identifier: "Asia/Dhaka")!
             formatter.locale = Locale(identifier: "bn_IN")
             
-            print("fajr \(formatter.string(from: prayers.fajr))")
-            print("sunrise \(formatter.string(from: prayers.sunrise))")
-            print("dhuhr \(formatter.string(from: prayers.dhuhr))")
-            print("asr \(formatter.string(from: prayers.asr))")
-            print("maghrib \(formatter.string(from: prayers.maghrib))")
-            print("isha \(formatter.string(from: prayers.isha))")
-        
             FajarLbl.text = formatter.string(from: prayers.fajr)
             DhuhrLbl.text = formatter.string(from: prayers.dhuhr)
             AsrLbl.text = formatter.string(from: prayers.asr)
@@ -106,26 +102,29 @@ class HomeVC: UIViewController {
             
             
             let prayerTimes = PrayerTimes(coordinates: coordinates, date: date, calculationParameters: params)
-
-//            let current = prayerTimes?.currentPrayer()
-//            let next = prayerTimes?.nextPrayer()
-//            let countdown = prayerTimes!.time(for: next!)
-//            NextNamajLbl.text = formatter.string(from: countdown)
+            
+            //            let next = prayerTimes?.nextPrayer()
+            //            let countdown = prayerTimes!.time(for: next!)
+            //            NextNamajLbl.text = formatter.string(from: countdown)
+            
+            let next = prayerTimes?.nextPrayer()
+            if next != nil{
+                let countdown = prayerTimes!.time(for: next!)
+                NextNamajLbl.text = formatter.string(from: countdown)
+            }else{
+                NextNamajLbl.isHidden = true
+                NextNamazLbl.isHidden = true
             }
+        }
     }
+    
     func NamazView(demoView: UIView) {
-        
-//        var demoView: UIView
-//        fajrView = demoView
-//        dhuhurView = demoView
-//        asrView = demoView
-//        maghribView = demoView
-//        ishaView = demoView
-        
         demoView.layer.borderWidth = 1
         demoView.layer.borderColor = UIColor.white.cgColor
-        demoView.layer.cornerRadius = 6
+        demoView.layer.cornerRadius = 8
     }
+    
+    
     
 }
 

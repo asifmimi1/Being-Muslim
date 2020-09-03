@@ -8,15 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		4CE6348015EE7AE24A801F94 /* Pods_Being_Muslim.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C48CC557319F34A51A9D4E5 /* Pods_Being_Muslim.framework */; };
+		7385755C24F7D8C600C1DB55 /* Surah.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7385755B24F7D8C600C1DB55 /* Surah.swift */; };
 		73B97C9F24F1901900510E09 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B97C9E24F1901900510E09 /* AppDelegate.swift */; };
 		73B97CA124F1901900510E09 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B97CA024F1901900510E09 /* SceneDelegate.swift */; };
 		73B97CA324F1901900510E09 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B97CA224F1901900510E09 /* HomeVC.swift */; };
 		73B97CA624F1901900510E09 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73B97CA424F1901900510E09 /* Main.storyboard */; };
 		73B97CA824F1901E00510E09 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73B97CA724F1901E00510E09 /* Assets.xcassets */; };
 		73B97CAB24F1901E00510E09 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73B97CA924F1901E00510E09 /* LaunchScreen.storyboard */; };
+		73E2527A24FC2041006115CC /* QuranVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E2527924FC2041006115CC /* QuranVC.swift */; };
+		73E2527C24FC207A006115CC /* QuranAudioCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E2527B24FC207A006115CC /* QuranAudioCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7385755B24F7D8C600C1DB55 /* Surah.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Surah.swift; sourceTree = "<group>"; };
 		73B97C9B24F1901900510E09 /* Being Muslim.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Being Muslim.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		73B97C9E24F1901900510E09 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		73B97CA024F1901900510E09 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -25,6 +29,8 @@
 		73B97CA724F1901E00510E09 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		73B97CAA24F1901E00510E09 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		73B97CAC24F1901E00510E09 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		73E2527924FC2041006115CC /* QuranVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuranVC.swift; sourceTree = "<group>"; };
+		73E2527B24FC207A006115CC /* QuranAudioCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuranAudioCell.swift; sourceTree = "<group>"; };
 		791BAAD4E2419AB78C0AC3FA /* Pods-Being Muslim.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Being Muslim.release.xcconfig"; path = "Target Support Files/Pods-Being Muslim/Pods-Being Muslim.release.xcconfig"; sourceTree = "<group>"; };
 		8080B2515DEBF0338C860603 /* Pods-Being Muslim.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Being Muslim.debug.xcconfig"; path = "Target Support Files/Pods-Being Muslim/Pods-Being Muslim.debug.xcconfig"; sourceTree = "<group>"; };
 		8C48CC557319F34A51A9D4E5 /* Pods_Being_Muslim.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Being_Muslim.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -42,6 +48,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7385755D24F7F02B00C1DB55 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7385755B24F7D8C600C1DB55 /* Surah.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		73B97C9224F1901900510E09 = {
 			isa = PBXGroup;
 			children = (
@@ -68,6 +82,7 @@
 				73B97CB424F1908E00510E09 /* View */,
 				73B97CB524F1909D00510E09 /* Utilities */,
 				73B97CAC24F1901E00510E09 /* Info.plist */,
+				7385755D24F7F02B00C1DB55 /* Model */,
 			);
 			path = "Being Muslim";
 			sourceTree = "<group>";
@@ -85,6 +100,8 @@
 			isa = PBXGroup;
 			children = (
 				73B97CA224F1901900510E09 /* HomeVC.swift */,
+				73E2527924FC2041006115CC /* QuranVC.swift */,
+				73E2527B24FC207A006115CC /* QuranAudioCell.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -238,7 +255,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73E2527C24FC207A006115CC /* QuranAudioCell.swift in Sources */,
+				73E2527A24FC2041006115CC /* QuranVC.swift in Sources */,
 				73B97CA324F1901900510E09 /* HomeVC.swift in Sources */,
+				7385755C24F7D8C600C1DB55 /* Surah.swift in Sources */,
 				73B97C9F24F1901900510E09 /* AppDelegate.swift in Sources */,
 				73B97CA124F1901900510E09 /* SceneDelegate.swift in Sources */,
 			);
