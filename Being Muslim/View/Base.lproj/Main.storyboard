@@ -484,9 +484,8 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="পরবর্তী নামাজের সময়" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nrX-FP-Llt">
                                         <rect key="frame" x="0.0" y="0.0" width="144" height="20"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="144" id="Ffw-hh-Xv1"/>
                                             <constraint firstAttribute="height" constant="20" id="Jno-5t-IVQ"/>
-                                            <constraint firstAttribute="width" constant="144" id="w2g-oo-EIA"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="144" id="w2g-oo-EIA"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -554,9 +553,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="266.66666666666669" y="-216.03260869565219"/>
+            <point key="canvasLocation" x="259" y="-333"/>
         </scene>
-        <!--QURAN-->
+        <!--সকল সূরাহ -->
         <scene sceneID="qbc-5X-KZO">
             <objects>
                 <viewController id="Y6a-oJ-dwy" customClass="QuranVC" customModule="Being_Muslim" customModuleProvider="target" sceneMemberID="viewController">
@@ -564,30 +563,79 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5cb-2n-7Z0">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5cb-2n-7Z0">
+                                <rect key="frame" x="0.0" y="44" width="414" height="643"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="separatorColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="73" id="cS8-Go-xBE" customClass="QuranAudioCell" customModule="Being_Muslim" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="73"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="100" id="cS8-Go-xBE" customClass="QuranAudioCell" customModule="Being_Muslim" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cS8-Go-xBE" id="CY0-oW-gvE">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="73"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tiM-qS-uac">
-                                                    <rect key="frame" x="186.33333333333334" y="26.333333333333336" width="41.666666666666657" height="20.333333333333336"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image-3" translatesAutoresizingMaskIntoConstraints="NO" id="Vct-Zz-rFA">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="সূরাহ:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0JW-OS-khJ">
+                                                    <rect key="frame" x="184.33333333333334" y="0.0" width="45.333333333333343" height="24"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="24" id="S7N-Da-CgT"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tiM-qS-uac">
+                                                    <rect key="frame" x="182.33333333333334" y="32" width="49.666666666666657" height="26"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="26" id="CMG-bA-N5R"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="22"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ISa-9R-JEY" userLabel="arabicNamelbl">
+                                                    <rect key="frame" x="188" y="66" width="38.333333333333343" height="20.333333333333329"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="20.329999999999998" id="Chc-ai-4lR"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WLY-x6-eFG">
+                                                    <rect key="frame" x="360" y="24" width="54" height="76"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="76" id="uxB-CL-CPQ"/>
+                                                    </constraints>
+                                                    <state key="normal" image="play"/>
+                                                    <connections>
+                                                        <action selector="audioPlayButton:" destination="Y6a-oJ-dwy" eventType="touchUpInside" id="jAw-vK-toa"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="tiM-qS-uac" firstAttribute="centerX" secondItem="CY0-oW-gvE" secondAttribute="centerX" id="l54-rH-QGz"/>
-                                                <constraint firstItem="tiM-qS-uac" firstAttribute="centerY" secondItem="CY0-oW-gvE" secondAttribute="centerY" id="nDg-QN-39Z"/>
+                                                <constraint firstAttribute="trailing" secondItem="WLY-x6-eFG" secondAttribute="trailing" id="2FI-Vf-mOf"/>
+                                                <constraint firstItem="Vct-Zz-rFA" firstAttribute="top" secondItem="CY0-oW-gvE" secondAttribute="top" id="62I-b0-PXF"/>
+                                                <constraint firstItem="tiM-qS-uac" firstAttribute="top" secondItem="0JW-OS-khJ" secondAttribute="bottom" constant="8" id="CUh-JM-70F"/>
+                                                <constraint firstAttribute="bottom" secondItem="Vct-Zz-rFA" secondAttribute="bottom" id="LBf-yR-ceh"/>
+                                                <constraint firstItem="0JW-OS-khJ" firstAttribute="top" secondItem="CY0-oW-gvE" secondAttribute="top" id="LV6-OM-SUM"/>
+                                                <constraint firstItem="ISa-9R-JEY" firstAttribute="top" secondItem="tiM-qS-uac" secondAttribute="bottom" constant="8" id="MMd-NU-Fsw"/>
+                                                <constraint firstAttribute="trailing" secondItem="Vct-Zz-rFA" secondAttribute="trailing" id="drA-VK-ZMf"/>
+                                                <constraint firstItem="ISa-9R-JEY" firstAttribute="centerX" secondItem="CY0-oW-gvE" secondAttribute="centerX" id="k38-bG-HMo"/>
+                                                <constraint firstAttribute="bottom" secondItem="WLY-x6-eFG" secondAttribute="bottom" id="lPR-kP-p9H"/>
+                                                <constraint firstItem="0JW-OS-khJ" firstAttribute="centerX" secondItem="CY0-oW-gvE" secondAttribute="centerX" id="rvW-iH-Ksd"/>
+                                                <constraint firstItem="tiM-qS-uac" firstAttribute="top" secondItem="0JW-OS-khJ" secondAttribute="bottom" constant="8" id="sgd-7h-TTf"/>
+                                                <constraint firstItem="tiM-qS-uac" firstAttribute="centerX" secondItem="CY0-oW-gvE" secondAttribute="centerX" id="uPU-qk-iWS"/>
+                                                <constraint firstItem="Vct-Zz-rFA" firstAttribute="leading" secondItem="CY0-oW-gvE" secondAttribute="leading" id="xui-Kv-2Ib"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
+                                            <outlet property="arabicNameLbl" destination="ISa-9R-JEY" id="erz-0j-5Fe"/>
+                                            <outlet property="audioPlayButton" destination="WLY-x6-eFG" id="inl-ot-mRP"/>
                                             <outlet property="nameLbl" destination="tiM-qS-uac" id="teQ-iI-EvZ"/>
                                         </connections>
                                     </tableViewCell>
@@ -607,32 +655,85 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="lgL-EX-rLG"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="QURAN" image="QuranIcon26" badgeValue="114" id="nTD-E8-Sc0">
-                        <color key="badgeColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    </tabBarItem>
+                    <navigationItem key="navigationItem" title="সকল সূরাহ " id="oL7-aF-6kj"/>
                     <connections>
                         <outlet property="tableView" destination="5cb-2n-7Z0" id="mZY-O4-MJ5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AR4-M7-mAd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="239.13043478260872" y="433.69565217391306"/>
+            <point key="canvasLocation" x="598.55072463768124" y="807.88043478260875"/>
         </scene>
-        <!--Hadith-->
+        <!--Tasbih-->
         <scene sceneID="5Qo-IG-XoA">
             <objects>
-                <viewController id="Srh-F9-Z0F" sceneMemberID="viewController">
+                <viewController id="Srh-F9-Z0F" customClass="TasbihVCViewController" customModule="Being_Muslim" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4be-VT-T3y">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="তাসবিহ গণনার জন্যে যে কোন স্থানে ক্লিক করুন" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zsn-jc-y9k">
+                                <rect key="frame" x="20" y="593" width="374" height="94"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="94" id="lDM-n1-GJY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="27"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="0.91695092430000003" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="444227" translatesAutoresizingMaskIntoConstraints="NO" id="gGD-MX-fXR">
+                                <rect key="frame" x="61" y="223.66666666666663" width="292" height="289"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="292" id="I3m-C9-LS7"/>
+                                    <constraint firstAttribute="height" constant="289" id="wF5-04-Jzs"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xlt-2i-u6T">
+                                <rect key="frame" x="142.66666666666666" y="319.66666666666669" width="128.99999999999997" height="97"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="97" id="3qs-wK-4JR"/>
+                                    <constraint firstAttribute="width" constant="129" id="BfD-Nl-uLJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="50"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="0.91695092430000003" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J3B-Nw-Nbx">
+                                <rect key="frame" x="141.66666666666666" y="538" width="130.99999999999997" height="47"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="47" id="Od6-1R-eDc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="30"/>
+                                <state key="normal" title="নতুন গণনা">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="0.91695092430000003" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="newCountButton:" destination="Srh-F9-Z0F" eventType="touchUpInside" id="han-43-Hhe"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.14063165668063674" green="0.44460411269430056" blue="0.12993120757061991" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Xlt-2i-u6T" firstAttribute="centerY" secondItem="4be-VT-T3y" secondAttribute="centerY" id="6BW-ZL-emX"/>
+                            <constraint firstItem="gGD-MX-fXR" firstAttribute="centerX" secondItem="4be-VT-T3y" secondAttribute="centerX" id="6yi-bs-8pt"/>
+                            <constraint firstItem="J3B-Nw-Nbx" firstAttribute="centerX" secondItem="4be-VT-T3y" secondAttribute="centerX" id="8um-4Q-kSh"/>
+                            <constraint firstItem="Zsn-jc-y9k" firstAttribute="bottom" secondItem="aE1-Ts-Znz" secondAttribute="bottom" id="YC6-A2-QoP"/>
+                            <constraint firstItem="Zsn-jc-y9k" firstAttribute="top" secondItem="J3B-Nw-Nbx" secondAttribute="bottom" constant="8" id="adw-dM-3Dh"/>
+                            <constraint firstItem="gGD-MX-fXR" firstAttribute="centerY" secondItem="4be-VT-T3y" secondAttribute="centerY" id="cgl-7E-syy"/>
+                            <constraint firstItem="aE1-Ts-Znz" firstAttribute="trailing" secondItem="Zsn-jc-y9k" secondAttribute="trailing" constant="20" id="ejR-4I-9Xh"/>
+                            <constraint firstItem="Zsn-jc-y9k" firstAttribute="leading" secondItem="aE1-Ts-Znz" secondAttribute="leading" constant="20" id="kZw-QZ-ODO"/>
+                            <constraint firstItem="Xlt-2i-u6T" firstAttribute="centerX" secondItem="4be-VT-T3y" secondAttribute="centerX" id="mde-j0-bFe"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="aE1-Ts-Znz"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Hadith" image="HadithIcon26" id="HMT-iy-P7q"/>
+                    <tabBarItem key="tabBarItem" title="Tasbih" image="HadithIcon26" id="HMT-iy-P7q"/>
+                    <connections>
+                        <outlet property="tasbihCountLbl" destination="Xlt-2i-u6T" id="4eL-7p-0Rn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5QF-Am-aNI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="893" y="434"/>
+            <point key="canvasLocation" x="1253.6231884057972" y="807.88043478260875"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="JML-NX-QiY">
@@ -643,11 +744,12 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="3Tu-oG-uOb">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" systemColor="systemGray2Color" red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="barTintColor" red="0.99999600649999998" green="1" blue="1" alpha="0.91695092429577463" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="wGv-Fo-2BM"/>
-                        <segue destination="Y6a-oJ-dwy" kind="relationship" relationship="viewControllers" id="7i0-kT-PlS"/>
+                        <segue destination="1n0-wJ-Nlc" kind="relationship" relationship="viewControllers" id="7i0-kT-PlS"/>
                         <segue destination="Srh-F9-Z0F" kind="relationship" relationship="viewControllers" id="Y5v-jL-eJA"/>
                     </connections>
                 </tabBarController>
@@ -655,14 +757,39 @@
             </objects>
             <point key="canvasLocation" x="-461" y="99"/>
         </scene>
+        <!--QURAN-->
+        <scene sceneID="ng6-m0-QWG">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1n0-wJ-Nlc" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="QURAN" image="QuranIcon26" badgeValue="114" id="nTD-E8-Sc0">
+                        <color key="badgeColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="IMB-NX-NUr">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.069079302250000002" green="0.1647014916" blue="0.20858281849999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Y6a-oJ-dwy" kind="relationship" relationship="rootViewController" id="Bem-tJ-vio"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xku-wj-R7G" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-68" y="808"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="444227" width="623" height="615"/>
         <image name="HadithIcon26" width="26" height="26"/>
         <image name="HomeIcon26" width="26" height="26"/>
         <image name="QuranIcon26" width="26" height="26"/>
         <image name="alarm-clock-xxl" width="256" height="256"/>
+        <image name="image-3" width="384" height="240"/>
         <image name="menu button display" width="28" height="19"/>
         <image name="mosque_back" width="720" height="917"/>
+        <image name="play" width="54" height="54"/>
         <image name="settings-4-xxl" width="256" height="256"/>
     </resources>
 </document>

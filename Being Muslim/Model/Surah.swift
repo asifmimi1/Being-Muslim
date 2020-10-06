@@ -7,12 +7,17 @@
 //
 
 import Foundation
-struct Surah: Decodable {
-    let data: Surahs
-}
-struct Surahs: Codable {
-    let surahs: [EnglishName]
-}
-struct EnglishName: Codable {
-    let englishName: String
-}
+//struct Surah: Decodable {
+//    let data: Surahs
+//}
+//struct Surahs: Codable {
+//    let surahs: [EnglishName]
+//}
+//struct EnglishName: Codable {
+//    let englishName: String
+//    let name: String
+//    let ayahs: Ayahs
+//}
+//struct Ayahs: Codable {
+//    let audio: String
+//}

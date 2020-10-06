@@ -10,6 +10,9 @@ import UIKit
 
 class QuranAudioCell: UITableViewCell {
     @IBOutlet weak var nameLbl: UILabel!
+    @IBOutlet weak var arabicNameLbl: UILabel!
+    @IBOutlet weak var audioPlayButton: UIButton!
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()

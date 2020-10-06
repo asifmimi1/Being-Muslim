@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4CE6348015EE7AE24A801F94 /* Pods_Being_Muslim.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C48CC557319F34A51A9D4E5 /* Pods_Being_Muslim.framework */; };
 		7385755C24F7D8C600C1DB55 /* Surah.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7385755B24F7D8C600C1DB55 /* Surah.swift */; };
+		73A1303E252C8189009B0745 /* TasbihVCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A1303D252C8189009B0745 /* TasbihVCViewController.swift */; };
 		73B97C9F24F1901900510E09 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B97C9E24F1901900510E09 /* AppDelegate.swift */; };
 		73B97CA124F1901900510E09 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B97CA024F1901900510E09 /* SceneDelegate.swift */; };
 		73B97CA324F1901900510E09 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B97CA224F1901900510E09 /* HomeVC.swift */; };
@@ -21,6 +22,7 @@
 
 /* Begin PBXFileReference section */
 		7385755B24F7D8C600C1DB55 /* Surah.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Surah.swift; sourceTree = "<group>"; };
+		73A1303D252C8189009B0745 /* TasbihVCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasbihVCViewController.swift; sourceTree = "<group>"; };
 		73B97C9B24F1901900510E09 /* Being Muslim.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Being Muslim.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		73B97C9E24F1901900510E09 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		73B97CA024F1901900510E09 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 				73B97CA224F1901900510E09 /* HomeVC.swift */,
 				73E2527924FC2041006115CC /* QuranVC.swift */,
 				73E2527B24FC207A006115CC /* QuranAudioCell.swift */,
+				73A1303D252C8189009B0745 /* TasbihVCViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -255,6 +258,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73A1303E252C8189009B0745 /* TasbihVCViewController.swift in Sources */,
 				73E2527C24FC207A006115CC /* QuranAudioCell.swift in Sources */,
 				73E2527A24FC2041006115CC /* QuranVC.swift in Sources */,
 				73B97CA324F1901900510E09 /* HomeVC.swift in Sources */,
