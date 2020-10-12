@@ -20,7 +20,7 @@ class TasbihVCViewController: UIViewController {
     
     @objc func tapAction(_ gesture: UITapGestureRecognizer) {
         counter += 1
-        tasbihCountLbl.text = String(counter)
+            tasbihCountLbl.text = String(counter)
     }
     
     @IBAction func newCountButton(_ sender: UIButton) {

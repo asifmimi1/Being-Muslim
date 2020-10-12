@@ -8,4 +8,8 @@ target 'Being Muslim' do
 
 pod 'Adhan'
 
+pod 'Alamofire'
+
+pod 'SwiftyJSON', :git => 'https://github.com/SwiftyJSON/SwiftyJSON.git'
+pod 'SVProgressHUD'
 end

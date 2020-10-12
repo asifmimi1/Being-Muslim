@@ -8,8 +8,18 @@
 
 import UIKit
 import Adhan
+import Alamofire
+import SwiftyJSON
+import CoreLocation
 
-class HomeVC: UIViewController {
+class HomeVC: UIViewController, CLLocationManagerDelegate {
+    
+    let locationManager = CLLocationManager()
+    let weatherDataModel = WeatherDataModel()
+    let WEATHER_URL = "https://api.openweathermap.org/data/2.5/weather"
+    let APP_ID = "d1abad9493addf56c008594bc9db25cc"
+    @IBOutlet weak var cityLocationLbl: UILabel!
+    @IBOutlet weak var temperatureLabel: UILabel!
     
     @IBOutlet weak var NextNamazLbl: UILabel!
     
@@ -52,6 +62,11 @@ class HomeVC: UIViewController {
         NamazView(demoView: MaghribNamazView)
         NamazView(demoView: IshaNamazView)
         //quranVC.parseJSON()
+        
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.startUpdatingLocation()
     }
     
     
@@ -100,13 +115,13 @@ class HomeVC: UIViewController {
             SahurTimeLbl.text = formatter.string(from: prayers.fajr)
             IftarTimeLbl.text = formatter.string(from: prayers.maghrib)
             
+            let nyc = Coordinates(latitude: 40.7128, longitude: -74.0059)
+            let qiblaDirection = Qibla(coordinates: nyc).direction
+            print("\n Qibla: \(qiblaDirection)")
+            
             
             let prayerTimes = PrayerTimes(coordinates: coordinates, date: date, calculationParameters: params)
-            
-            //            let next = prayerTimes?.nextPrayer()
-            //            let countdown = prayerTimes!.time(for: next!)
-            //            NextNamajLbl.text = formatter.string(from: countdown)
-            
+        
             let next = prayerTimes?.nextPrayer()
             if next != nil{
                 let countdown = prayerTimes!.time(for: next!)
@@ -128,3 +143,66 @@ class HomeVC: UIViewController {
     
 }
 
+//MARK: Location Manager setup
+extension HomeVC{
+    //Write the didUpdateLocations method here:
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        let location = locations[locations.count - 1]
+        
+        if location.horizontalAccuracy > 0{
+            locationManager.stopUpdatingLocation()
+            locationManager.delegate = nil
+            let lat = String(location.coordinate.latitude)
+            let lon = String(location.coordinate.longitude)
+            let params : [String : String] = ["lat" : lat , "lon" : lon, "appid" : APP_ID]
+            print(params)
+            getWeatherData(url: WEATHER_URL, parameter: params)
+        }
+    }
+    //Write the didFailWithError method here:
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        print("Can't find the location ERROR: \(error)")
+        cityLocationLbl.text = "Dhaka"
+    }
+    //MARK: - Change City Delegate methods
+    func changeCityName(searchCityName: String) {
+        print(searchCityName)
+        let params : [String : String] = ["q" : searchCityName, "appid" : APP_ID]
+        getWeatherData(url: WEATHER_URL, parameter: params)
+    }
+    
+    //MARK: - Networking with Alamofire
+    //Write the getWeatherData method here:
+    func getWeatherData(url : String, parameter : [String : String]) {
+        Alamofire.request(url, method: .get, parameters: parameter).responseJSON {
+            response in
+            if response.result.isSuccess{
+                print("Ntetworking Successful")
+                let jsonData : JSON = JSON(response.result.value!)
+                print("JSON DATA:\(jsonData)")
+                self.weatherData(data: jsonData)
+                self.updateUIView()
+            }
+            else{
+                print("Error Getting JSON response : \(response.result.error!)")
+            }
+        }
+    }
+    
+    //MARK: - JSON Parsing
+    func weatherData(data : JSON) {
+        let tempResult = data["main"]["temp"].doubleValue
+        weatherDataModel.Temperature = Int(tempResult - 273.15)
+        weatherDataModel.CityId = data["weather"]["0"]["id"].intValue
+        weatherDataModel.CityName = data["name"].stringValue
+        weatherDataModel.WeatherIcon = weatherDataModel.updateWeatherIcon(condition: weatherDataModel.CityId)
+    }
+    //MARK: - UI Updates
+    func updateUIView() {
+        cityLocationLbl.text = weatherDataModel.CityName
+        print(weatherDataModel.CityName)
+        temperatureLabel.text = String(weatherDataModel.Temperature)
+        //weatherIcon.image = UIImage(named: weatherDataModel.WeatherIcon)
+    }
+
+}

@@ -95,6 +95,7 @@ class QuranVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         let cell:QuranAudioCell = tableView.dequeueReusableCell(withIdentifier: "cell") as! QuranAudioCell
         
         let surah = surahName[indexPath.row]
+        //let audioURL = audioUrl[indexPath.row]
         cell.nameLbl.text = surah.englishName
         cell.arabicNameLbl.text = surah.name
         return cell

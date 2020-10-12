@@ -8,8 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		4CE6348015EE7AE24A801F94 /* Pods_Being_Muslim.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C48CC557319F34A51A9D4E5 /* Pods_Being_Muslim.framework */; };
+		730C1FEF253431BE003CFE19 /* WeatherDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730C1FEE253431BE003CFE19 /* WeatherDataModel.swift */; };
 		7385755C24F7D8C600C1DB55 /* Surah.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7385755B24F7D8C600C1DB55 /* Surah.swift */; };
-		73A1303E252C8189009B0745 /* TasbihVCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A1303D252C8189009B0745 /* TasbihVCViewController.swift */; };
+		73A1303E252C8189009B0745 /* TasbihVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A1303D252C8189009B0745 /* TasbihVC.swift */; };
 		73B97C9F24F1901900510E09 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B97C9E24F1901900510E09 /* AppDelegate.swift */; };
 		73B97CA124F1901900510E09 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B97CA024F1901900510E09 /* SceneDelegate.swift */; };
 		73B97CA324F1901900510E09 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B97CA224F1901900510E09 /* HomeVC.swift */; };
@@ -21,8 +22,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		730C1FEE253431BE003CFE19 /* WeatherDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDataModel.swift; sourceTree = "<group>"; };
 		7385755B24F7D8C600C1DB55 /* Surah.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Surah.swift; sourceTree = "<group>"; };
-		73A1303D252C8189009B0745 /* TasbihVCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasbihVCViewController.swift; sourceTree = "<group>"; };
+		73A1303D252C8189009B0745 /* TasbihVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasbihVC.swift; sourceTree = "<group>"; };
 		73B97C9B24F1901900510E09 /* Being Muslim.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Being Muslim.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		73B97C9E24F1901900510E09 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		73B97CA024F1901900510E09 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -54,6 +56,7 @@
 			isa = PBXGroup;
 			children = (
 				7385755B24F7D8C600C1DB55 /* Surah.swift */,
+				730C1FEE253431BE003CFE19 /* WeatherDataModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -104,7 +107,7 @@
 				73B97CA224F1901900510E09 /* HomeVC.swift */,
 				73E2527924FC2041006115CC /* QuranVC.swift */,
 				73E2527B24FC207A006115CC /* QuranAudioCell.swift */,
-				73A1303D252C8189009B0745 /* TasbihVCViewController.swift */,
+				73A1303D252C8189009B0745 /* TasbihVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -172,7 +175,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1150;
-				LastUpgradeCheck = 1150;
+				LastUpgradeCheck = 1200;
 				ORGANIZATIONNAME = "Asif's Mac";
 				TargetAttributes = {
 					73B97C9A24F1901900510E09 = {
@@ -258,10 +261,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				73A1303E252C8189009B0745 /* TasbihVCViewController.swift in Sources */,
+				73A1303E252C8189009B0745 /* TasbihVC.swift in Sources */,
 				73E2527C24FC207A006115CC /* QuranAudioCell.swift in Sources */,
 				73E2527A24FC2041006115CC /* QuranVC.swift in Sources */,
 				73B97CA324F1901900510E09 /* HomeVC.swift in Sources */,
+				730C1FEF253431BE003CFE19 /* WeatherDataModel.swift in Sources */,
 				7385755C24F7D8C600C1DB55 /* Surah.swift in Sources */,
 				73B97C9F24F1901900510E09 /* AppDelegate.swift in Sources */,
 				73B97CA124F1901900510E09 /* SceneDelegate.swift in Sources */,
@@ -316,6 +320,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -376,6 +381,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;

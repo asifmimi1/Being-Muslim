@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dOI-My-cu9">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dOI-My-cu9">
     <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -21,43 +23,32 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PaW-xi-Sni" userLabel="BeingMuslimView">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="40"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R4d-WL-sGq" userLabel="Settings">
-                                        <rect key="frame" x="316" y="11" width="18" height="18"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="18" id="6rR-AT-fFh"/>
-                                            <constraint firstAttribute="width" constant="18" id="C3C-uF-bzr"/>
-                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="18" id="Dg0-pi-FFR"/>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="18" id="Zw5-MA-Ccz"/>
-                                        </constraints>
-                                        <state key="normal" image="settings-4-xxl"/>
-                                    </button>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="cC8-rb-8Ax">
-                                        <rect key="frame" x="20" y="9" width="139.33333333333334" height="22"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="qIH-bW-m5N">
+                                        <rect key="frame" x="132.66666666666666" y="16" width="148.99999999999997" height="20"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U8F-hN-6yj" userLabel="Menu">
-                                                <rect key="frame" x="0.0" y="0.0" width="28" height="22"/>
-                                                <state key="normal" image="menu button display"/>
-                                            </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Being Muslim" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tK2-n0-lSf">
-                                                <rect key="frame" x="35.999999999999993" y="0.0" width="103.33333333333331" height="22"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="আজকের তাপমাত্রা :" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1X8-C4-cFr">
+                                                <rect key="frame" x="0.0" y="0.0" width="131.33333333333334" height="20"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="0.91695092430000003" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6RF-y3-678">
+                                                <rect key="frame" x="139.33333333333334" y="0.0" width="9.6666666666666572" height="20"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="0.91695092430000003" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="22" id="wuL-ga-2br"/>
+                                            <constraint firstAttribute="height" constant="20" id="4Fi-RI-fr4"/>
                                         </constraints>
                                     </stackView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="R4d-WL-sGq" secondAttribute="bottom" constant="11" id="88Z-NG-ZJb"/>
-                                    <constraint firstItem="cC8-rb-8Ax" firstAttribute="top" secondItem="PaW-xi-Sni" secondAttribute="top" constant="9" id="S71-Kx-E5L"/>
-                                    <constraint firstAttribute="bottom" secondItem="cC8-rb-8Ax" secondAttribute="bottom" constant="9" id="UUQ-TH-MwX"/>
-                                    <constraint firstAttribute="trailing" secondItem="R4d-WL-sGq" secondAttribute="trailing" constant="80" id="V22-bM-9FD"/>
-                                    <constraint firstItem="R4d-WL-sGq" firstAttribute="top" secondItem="PaW-xi-Sni" secondAttribute="top" constant="11" id="c1b-ZV-XrU"/>
-                                    <constraint firstAttribute="height" constant="40" id="cJl-e4-Im0"/>
-                                    <constraint firstItem="cC8-rb-8Ax" firstAttribute="leading" secondItem="PaW-xi-Sni" secondAttribute="leading" constant="20" id="r4f-Ss-Sg9"/>
+                                    <constraint firstAttribute="bottom" secondItem="qIH-bW-m5N" secondAttribute="bottom" constant="4" id="TDr-Xo-OhF"/>
+                                    <constraint firstItem="qIH-bW-m5N" firstAttribute="centerX" secondItem="PaW-xi-Sni" secondAttribute="centerX" id="awF-Ao-kDt"/>
+                                    <constraint firstAttribute="height" constant="40" id="idZ-Pz-nXr"/>
+                                    <constraint firstItem="qIH-bW-m5N" firstAttribute="top" secondItem="PaW-xi-Sni" secondAttribute="top" constant="16" id="qRc-lU-awK"/>
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="ITy-7F-vQO">
@@ -503,11 +494,13 @@
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="ehz-Cd-2nm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="0yq-H4-Wqz"/>
+                            <constraint firstItem="PaW-xi-Sni" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="2V9-eu-oZ6"/>
+                            <constraint firstItem="ITy-7F-vQO" firstAttribute="top" secondItem="PaW-xi-Sni" secondAttribute="bottom" constant="20" id="3Ky-Kf-JAB"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ITy-7F-vQO" secondAttribute="trailing" constant="20.329999999999998" id="4kg-2u-05c"/>
-                            <constraint firstItem="PaW-xi-Sni" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="6a4-GP-BAp"/>
                             <constraint firstItem="A70-TH-TSR" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Ef2-hJ-Ipc"/>
                             <constraint firstItem="oXD-7Z-Bqe" firstAttribute="leading" secondItem="A70-TH-TSR" secondAttribute="leading" id="Id3-eH-Tqu"/>
                             <constraint firstItem="oXD-7Z-Bqe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NsP-82-aLC"/>
@@ -515,19 +508,16 @@
                             <constraint firstAttribute="bottom" secondItem="ehz-Cd-2nm" secondAttribute="bottom" id="bz1-RS-uUO"/>
                             <constraint firstItem="ehz-Cd-2nm" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="csh-9I-lh2"/>
                             <constraint firstAttribute="trailing" secondItem="ehz-Cd-2nm" secondAttribute="trailing" id="dL7-qd-CvG"/>
-                            <constraint firstItem="xYX-dp-5s4" firstAttribute="top" secondItem="PaW-xi-Sni" secondAttribute="bottom" constant="20" id="f6e-7H-olL"/>
                             <constraint firstItem="GOM-FU-Lbe" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="238" id="fWE-B5-grh"/>
                             <constraint firstItem="A70-TH-TSR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="gPw-cE-6Rl"/>
                             <constraint firstItem="oXD-7Z-Bqe" firstAttribute="top" secondItem="A70-TH-TSR" secondAttribute="bottom" constant="8" id="i5h-gQ-LIH"/>
+                            <constraint firstItem="xYX-dp-5s4" firstAttribute="top" secondItem="ITy-7F-vQO" secondAttribute="top" id="nPz-5m-i7C"/>
+                            <constraint firstItem="PaW-xi-Sni" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="oio-RW-e8L"/>
                             <constraint firstItem="oXD-7Z-Bqe" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="u5G-L0-B5K"/>
-                            <constraint firstItem="ITy-7F-vQO" firstAttribute="top" secondItem="PaW-xi-Sni" secondAttribute="bottom" constant="20" id="uco-uo-LK1"/>
-                            <constraint firstItem="PaW-xi-Sni" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="vaK-nX-gea"/>
-                            <constraint firstItem="PaW-xi-Sni" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="vbM-F9-LWE"/>
                             <constraint firstItem="xYX-dp-5s4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="w03-l2-0Bg"/>
+                            <constraint firstItem="PaW-xi-Sni" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="xb5-l0-mHh"/>
                             <constraint firstItem="GOM-FU-Lbe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xvl-QI-siH"/>
-                            <constraint firstItem="ITy-7F-vQO" firstAttribute="top" secondItem="PaW-xi-Sni" secondAttribute="bottom" constant="20" id="zfE-cC-x1z"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" image="HomeIcon26" id="fHJ-Gd-h9o"/>
                     <connections>
@@ -549,11 +539,13 @@
                         <outlet property="SahurTimeLbl" destination="jO0-eg-oGJ" id="YqS-JU-eBr"/>
                         <outlet property="SunriseLbl" destination="T7O-2C-Rj2" id="JjK-Xl-UiF"/>
                         <outlet property="SunsetLbl" destination="Swh-4m-HxE" id="uNm-Z4-FzR"/>
+                        <outlet property="cityLocationLbl" destination="qCX-QP-H5J" id="xEr-Sd-Uhj"/>
+                        <outlet property="temperatureLabel" destination="6RF-y3-678" id="LG8-L4-5xr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="259" y="-333"/>
+            <point key="canvasLocation" x="123.18840579710145" y="-535.59782608695662"/>
         </scene>
         <!--সকল সূরাহ -->
         <scene sceneID="qbc-5X-KZO">
@@ -565,7 +557,7 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5cb-2n-7Z0">
                                 <rect key="frame" x="0.0" y="44" width="414" height="643"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <color key="separatorColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="100" id="cS8-Go-xBE" customClass="QuranAudioCell" customModule="Being_Muslim" customModuleProvider="target">
@@ -646,14 +638,14 @@
                                 </connections>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="lgL-EX-rLG"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="5cb-2n-7Z0" firstAttribute="leading" secondItem="lgL-EX-rLG" secondAttribute="leading" id="eLg-T5-zk6"/>
                             <constraint firstItem="5cb-2n-7Z0" firstAttribute="top" secondItem="lgL-EX-rLG" secondAttribute="top" id="g7u-Ey-5cb"/>
                             <constraint firstItem="5cb-2n-7Z0" firstAttribute="bottom" secondItem="lgL-EX-rLG" secondAttribute="bottom" id="v1A-tN-pJY"/>
                             <constraint firstItem="5cb-2n-7Z0" firstAttribute="trailing" secondItem="lgL-EX-rLG" secondAttribute="trailing" id="wVy-u2-w13"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="lgL-EX-rLG"/>
                     </view>
                     <navigationItem key="navigationItem" title="সকল সূরাহ " id="oL7-aF-6kj"/>
                     <connections>
@@ -681,27 +673,40 @@
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="0.91695092430000003" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="444227" translatesAutoresizingMaskIntoConstraints="NO" id="gGD-MX-fXR">
-                                <rect key="frame" x="61" y="223.66666666666663" width="292" height="289"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0U3-xw-O1q">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="440"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="444227" translatesAutoresizingMaskIntoConstraints="NO" id="gGD-MX-fXR">
+                                        <rect key="frame" x="61" y="75.666666666666686" width="292" height="289"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="289" id="NXV-gD-t9a"/>
+                                            <constraint firstAttribute="width" constant="292" id="XdU-rr-AbM"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xlt-2i-u6T">
+                                        <rect key="frame" x="142.66666666666666" y="171.66666666666666" width="128.99999999999997" height="96.999999999999972"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="129" id="0lo-S1-sNg"/>
+                                            <constraint firstAttribute="height" constant="97" id="RvL-f5-xpr"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="50"/>
+                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="0.91695092430000003" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="292" id="I3m-C9-LS7"/>
-                                    <constraint firstAttribute="height" constant="289" id="wF5-04-Jzs"/>
+                                    <constraint firstItem="gGD-MX-fXR" firstAttribute="centerY" secondItem="0U3-xw-O1q" secondAttribute="centerY" id="Dhn-1P-VeZ"/>
+                                    <constraint firstItem="Xlt-2i-u6T" firstAttribute="centerY" secondItem="0U3-xw-O1q" secondAttribute="centerY" id="TlJ-NJ-Dtf"/>
+                                    <constraint firstAttribute="height" constant="440" id="lqQ-7j-JYj"/>
+                                    <constraint firstItem="Xlt-2i-u6T" firstAttribute="centerX" secondItem="0U3-xw-O1q" secondAttribute="centerX" id="sLa-jT-JIf"/>
+                                    <constraint firstItem="gGD-MX-fXR" firstAttribute="centerX" secondItem="0U3-xw-O1q" secondAttribute="centerX" id="xSW-5x-t5S"/>
                                 </constraints>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xlt-2i-u6T">
-                                <rect key="frame" x="142.66666666666666" y="319.66666666666669" width="128.99999999999997" height="97"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J3B-Nw-Nbx">
+                                <rect key="frame" x="141.66666666666666" y="532" width="130.99999999999997" height="53"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="97" id="3qs-wK-4JR"/>
-                                    <constraint firstAttribute="width" constant="129" id="BfD-Nl-uLJ"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="50"/>
-                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="0.91695092430000003" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J3B-Nw-Nbx">
-                                <rect key="frame" x="141.66666666666666" y="538" width="130.99999999999997" height="47"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="47" id="Od6-1R-eDc"/>
+                                    <constraint firstAttribute="height" constant="53" id="P4R-pd-WO2"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="30"/>
                                 <state key="normal" title="নতুন গণনা">
@@ -712,19 +717,18 @@
                                 </connections>
                             </button>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="aE1-Ts-Znz"/>
                         <color key="backgroundColor" red="0.14063165668063674" green="0.44460411269430056" blue="0.12993120757061991" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Xlt-2i-u6T" firstAttribute="centerY" secondItem="4be-VT-T3y" secondAttribute="centerY" id="6BW-ZL-emX"/>
-                            <constraint firstItem="gGD-MX-fXR" firstAttribute="centerX" secondItem="4be-VT-T3y" secondAttribute="centerX" id="6yi-bs-8pt"/>
-                            <constraint firstItem="J3B-Nw-Nbx" firstAttribute="centerX" secondItem="4be-VT-T3y" secondAttribute="centerX" id="8um-4Q-kSh"/>
+                            <constraint firstItem="0U3-xw-O1q" firstAttribute="top" secondItem="aE1-Ts-Znz" secondAttribute="top" id="JcE-Jj-tk4"/>
                             <constraint firstItem="Zsn-jc-y9k" firstAttribute="bottom" secondItem="aE1-Ts-Znz" secondAttribute="bottom" id="YC6-A2-QoP"/>
-                            <constraint firstItem="Zsn-jc-y9k" firstAttribute="top" secondItem="J3B-Nw-Nbx" secondAttribute="bottom" constant="8" id="adw-dM-3Dh"/>
-                            <constraint firstItem="gGD-MX-fXR" firstAttribute="centerY" secondItem="4be-VT-T3y" secondAttribute="centerY" id="cgl-7E-syy"/>
+                            <constraint firstItem="0U3-xw-O1q" firstAttribute="trailing" secondItem="aE1-Ts-Znz" secondAttribute="trailing" id="bO8-Pf-sXW"/>
+                            <constraint firstItem="J3B-Nw-Nbx" firstAttribute="centerX" secondItem="4be-VT-T3y" secondAttribute="centerX" id="c21-4U-dt7"/>
                             <constraint firstItem="aE1-Ts-Znz" firstAttribute="trailing" secondItem="Zsn-jc-y9k" secondAttribute="trailing" constant="20" id="ejR-4I-9Xh"/>
                             <constraint firstItem="Zsn-jc-y9k" firstAttribute="leading" secondItem="aE1-Ts-Znz" secondAttribute="leading" constant="20" id="kZw-QZ-ODO"/>
-                            <constraint firstItem="Xlt-2i-u6T" firstAttribute="centerX" secondItem="4be-VT-T3y" secondAttribute="centerX" id="mde-j0-bFe"/>
+                            <constraint firstItem="Zsn-jc-y9k" firstAttribute="top" secondItem="J3B-Nw-Nbx" secondAttribute="bottom" constant="8" id="m5p-2b-lwN"/>
+                            <constraint firstItem="0U3-xw-O1q" firstAttribute="leading" secondItem="aE1-Ts-Znz" secondAttribute="leading" id="rHL-Sz-aI9"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="aE1-Ts-Znz"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Tasbih" image="HadithIcon26" id="HMT-iy-P7q"/>
                     <connections>
@@ -744,7 +748,7 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="3Tu-oG-uOb">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" systemColor="systemGray2Color" red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" systemColor="systemGray2Color"/>
                         <color key="barTintColor" red="0.99999600649999998" green="1" blue="1" alpha="0.91695092429577463" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
@@ -762,7 +766,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1n0-wJ-Nlc" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="QURAN" image="QuranIcon26" badgeValue="114" id="nTD-E8-Sc0">
-                        <color key="badgeColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="badgeColor" systemColor="systemGreenColor"/>
                     </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="IMB-NX-NUr">
@@ -787,9 +791,19 @@
         <image name="QuranIcon26" width="26" height="26"/>
         <image name="alarm-clock-xxl" width="256" height="256"/>
         <image name="image-3" width="384" height="240"/>
-        <image name="menu button display" width="28" height="19"/>
         <image name="mosque_back" width="720" height="917"/>
         <image name="play" width="54" height="54"/>
-        <image name="settings-4-xxl" width="256" height="256"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
     </resources>
 </document>
