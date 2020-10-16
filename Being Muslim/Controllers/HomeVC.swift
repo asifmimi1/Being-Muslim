@@ -179,7 +179,7 @@ extension HomeVC{
             if response.result.isSuccess{
                 print("Ntetworking Successful")
                 let jsonData : JSON = JSON(response.result.value!)
-                print("JSON DATA:\(jsonData)")
+                //print("JSON DATA:\(jsonData)")
                 self.weatherData(data: jsonData)
                 self.updateUIView()
             }

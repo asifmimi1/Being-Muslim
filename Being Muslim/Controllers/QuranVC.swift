@@ -9,6 +9,7 @@
 import UIKit
 import Foundation
 import AVFoundation
+import Alamofire
 
 struct Surah: Decodable {
     let data: Surahs
@@ -40,9 +41,10 @@ class QuranVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         super.viewDidLoad()
         self.tableView.delegate = self
         self.tableView.dataSource = self
-        parseJSON()
+        
+            self.parseJSON()
     }
-    
+
     //MARK: JSON parse
     func parseJSON()  {
         let url = URL(string: "https://api.alquran.cloud/v1/quran/ar.alafasy")
@@ -54,6 +56,7 @@ class QuranVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         
         URLSession.shared.dataTask(with: url!) { (data, response, error) in
             if error == nil && data != nil{
+                print("Total data: \(data!)")
                 do{
                     let response = try JSONDecoder().decode(Surah.self, from: data!)
                     self.surahName = response.data.surahs
@@ -64,6 +67,7 @@ class QuranVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 //                    }
                     DispatchQueue.main.async {
                         self.tableView.reloadData()
+                        self.tableView.tableFooterView = UIView(frame: .zero)
                     }
                 }catch{
                     print(error)
@@ -80,8 +84,8 @@ class QuranVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 //            self.view.layer.addSublayer(playerLayer)
         }.resume()
         
-        
     }
+    
     
     //MARK: Tableview delegate
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
